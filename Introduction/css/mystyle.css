@@ -1,5 +1,14 @@
 body {
   background-color: rgb(255, 201, 75);
+  text-align: center;
+}
+
+.Title{
+    color:blue;
+}
+
+.Paragraph{
+    color:yellow;
 }
 
 h1 {
