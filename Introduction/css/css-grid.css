@@ -2,13 +2,13 @@
   display: grid;
   grid-template-columns: 1fr
   background-color: rgb(109, 0, 0);
-  padding: 1px;
+  padding: 3px;
   gap: 1px;
 }
 .container div {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  padding: 1px;
+  padding: 3px;
   font-size: 30px;
   text-align: center;
 }
