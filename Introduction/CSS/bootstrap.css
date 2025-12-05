@@ -2,57 +2,46 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f6f9;
+  background-color: white; /* Changed to white to match your screenshot */
 }
 
 h1 {
-  font-weight: 600;
-  color: #2c3e50;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: #212529;
 }
 
 /* Image Styling */
 .profile-pic {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  /* Removed border radius so it matches the square theme, add 'border-radius: 50%' if you want it circle again */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+  max-width: 200px; /* Limits size nicely */
+  height: auto;
+  border-radius: 10px; /* Optional: Slight curve on image */
 }
 
-/* Info Box Styling */
-.info-box {
-  padding: 2rem;
-  /* Removed border-radius so boxes touch perfectly */
-  border-radius: 0; 
-  /* Removed separate box-shadows to avoid weird overlaps */
-  height: 100%; /* Ensures they are equal height */
+/* Typography inside boxes */
+h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-/* Typography */
-h3, h4 {
+h4 {
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-h4 {
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  padding-bottom: 10px;
-}
-
 p, li {
   font-size: 1.1rem;
-  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
 ul {
   list-style-type: none;
   padding-left: 0;
-  margin-bottom: 0;
 }
 
-/* Color Overrides */
+/* Color Overrides - Using standard Bootstrap colors but you can tweak here */
 .bg-primary {
   background-color: #0d6efd !important; 
+}
+
+.bg-dark {
+  background-color: #212529 !important;
 }
