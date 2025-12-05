@@ -13,9 +13,10 @@ h1 {
 }
 
 .profile-pic {
-  max-width: 200px;
-  height: auto;
-  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* This makes it a circle */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
