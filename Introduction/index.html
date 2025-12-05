@@ -10,36 +10,52 @@
 </head>
 <body>
  
-<h1>Personal Profile Web page - Anthonee Rumbaoa</h1>
-<p>
-
-About Me<br>
- - Hello! I'm AJ and pagod na ako.</br>
-Course <br>
- - Bachelor in Science Computer Science specializing Cybersecurity and Forensic - Asia Pacific College </br>
-IT Experience<br>
- - Mag open ng computer</br>
-Hobbies & Interests<br>
- - Loves to play sports and videogames</br>
- - A fan of R&B music</br>
- - Laging pagod</br>
-Goals In Life / Dream<br>
- - Experience 10+hrs of sleep everyday</br>
-<img src="https://img.notionusercontent.com/s3/prod-files-secure%2F85136156-3c6d-8169-b35a-00034a56176e%2Fdb733850-de8b-40b0-8051-ae7fa152d1c3%2Fhehe.jpg/size/w=2000?exp=1764661426&sig=SAL0F8j8BpgxgxeTtZTCvDd-krjcETkIwyjc4R8CgPE&id=27736156-3c6d-808d-b057-ff0fb74c4cd4&table=block&userId=277d872b-594c-816b-a439-000271374781" alt="Sample" width="500" height="500">
- 
-</p>
-
 <div class="container-fluid mt-3">
-  <h1>Responsive Auto Layout Columns</h1>
-  <p>In Bootstrap 5, there is an easy way to create equal width columns: just use the <code>.col-md</code> class on a specified number of col elements. Bootstrap will recognize how many columns there are, and each column will get the same width.</p>
-  <p>If the screen size is <strong>less than 768px</strong>, the columns will stack horizontally.</p>
+  <h1>Personal Profile Web page - Anthonee Rumbaoa</h1>
+  
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <img src="https://img.notionusercontent.com/s3/prod-files-secure%2F85136156-3c6d-8169-b35a-00034a56176e%2Fdb733850-de8b-40b0-8051-ae7fa152d1c3%2Fhehe.jpg/size/w=2000?exp=1764915280&sig=5nis2YFqSXhUIE6EqmUNHD6qTOmlHluhUaYqpcyFxao&id=27736156-3c6d-808d-b057-ff0fb74c4cd4&table=block&userId=277d872b-594c-816b-a439-000271374781" alt="Anthonee Rumbaoa" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+    </div>
+    <div class="col-md-8 d-flex align-items-center">
+      <div>
+        <h3>About Me</h3>
+        <p class="lead">Hello! I'm AJ and pagod na ako.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md bg-primary text-white">1 of 2</div>
-      <div class="col-md bg-dark text-white">2 of 2</div>
+      <div class="col-md bg-primary text-white p-3">
+        <h4>Course</h4>
+        <p>Bachelor in Science Computer Science specializing Cybersecurity and Forensic - Asia Pacific College</p>
+      </div>
+      <div class="col-md bg-dark text-white p-3">
+        <h4>IT Experience</h4>
+        <p>Mag open ng computer</p>
+      </div>
     </div>  
   </div>
   <br>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md bg-primary text-white p-3">
+        <h4>Hobbies & Interests</h4>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>- Loves to play sports and videogames</li>
+          <li>- A fan of R&B music</li>
+          <li>- Laging pagod</li>
+        </ul>
+      </div>
+      <div class="col-md bg-dark text-white p-3">
+        <h4>Goals In Life / Dream</h4>
+        <p>- Experience 10+hrs of sleep everyday</p>
+      </div>
+    </div>  
+  </div>
+</div>
   
   <div class="container-fluid">
     <div class="row">
