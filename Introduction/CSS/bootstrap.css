@@ -2,21 +2,19 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: white; /* Changed to white to match your screenshot */
+  background-color: white;
 }
 
 h1 {
   color: #212529;
 }
 
-/* Image Styling */
 .profile-pic {
-  max-width: 200px; /* Limits size nicely */
+  max-width: 200px; 
   height: auto;
-  border-radius: 10px; /* Optional: Slight curve on image */
+  border-radius: 10px; 
 }
 
-/* Typography inside boxes */
 h3 {
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -37,7 +35,6 @@ ul {
   padding-left: 0;
 }
 
-/* Color Overrides - Using standard Bootstrap colors but you can tweak here */
 .bg-primary {
   background-color: #0d6efd !important; 
 }
