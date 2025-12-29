@@ -7,24 +7,187 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --bg-dark: #000000;  /* PURE BLACK */
+            --card-bg: #111111;  /* Dark Gray Cards */
+            --text-main: #ffffff;
+            --text-muted: #a1a1a1;
+        }
+
+        body {
+            background-color: var(--bg-dark) !important; /* Force Black */
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            padding-top: 80px; 
+        }
+
+        /* --- NAVBAR STYLING --- */
+        .custom-navbar {
+            background-color: rgba(0, 0, 0, 0.95) !important; /* Dark Navbar */
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: var(--text-muted) !important; /* Grey Links */
+            font-weight: 500;
+            margin-left: 1rem;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link:focus, .nav-link.active {
+            color: var(--text-main) !important; /* White on Hover */
+        }
+
+        /* Mobile Menu Fix */
+        .navbar-collapse {
+            background-color: var(--bg-dark); /* Ensures mobile menu is black */
+        }
+
+        /* Social Icons */
+        .social-nav a {
+            transition: transform 0.3s;
+        }
+        .social-nav a:hover {
+            transform: translateY(-3px);
+            color: #ccc !important;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero h1 {
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .role-text {
+            font-weight: 300;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: var(--text-main);
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-white {
+            background-color: white;
+            color: black;
+            font-weight: 600;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        .btn-white:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .btn-outline-light {
+            border: 2px solid rgba(255,255,255,0.3);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-light:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+
+        /* --- IMAGE --- */
+        .image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .main-photo {
+            border-radius: 20px;
+            width: 100%;
+            filter: grayscale(100%);
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+        .main-photo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+
+        /* --- CARDS --- */
+        .dark-card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+        .dark-card h4 {
+            font-weight: 700;
+            margin-top: 1rem;
+            color: white;
+        }
+        .dark-card:hover {
+            transform: translateY(-8px);
+            border-color: #555;
+            background-color: #1a1a1a;
+            box-shadow: 0 10px 30px rgba(255,255,255,0.05);
+        }
+        .dark-card i {
+            transition: transform 0.3s ease;
+        }
+        .dark-card:hover i {
+            transform: scale(1.1);
+        }
+
+        /* --- MOBILE TWEAKS --- */
+        @media (max-width: 991px) {
+            .hero { text-align: center; padding-top: 2rem; }
+            .hero h1 { font-size: 3.5rem; }
+            .hero-buttons { justify-content: center; display: flex; gap: 10px; }
+            .image-wrapper { margin-top: 3rem; }
+            .social-nav { justify-content: center; margin-bottom: 1rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">Anthonee.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span> </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Design</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-                <div class="d-flex ms-lg-3 mt-3 mt-lg-0 social-nav">
+                <div class="d-flex ms-lg-3 mt-3 mt-lg-0 social-nav justify-content-center">
                     <a href="#" class="text-white me-3"><i class="fab fa-behance"></i></a>
                     <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
                     <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
@@ -33,28 +196,23 @@
         </div>
     </nav>
 
-    <main class="main-content">
-        
+    <main>
         <section id="home" class="hero d-flex align-items-center min-vh-100">
             <div class="container">
                 <div class="row align-items-center flex-column-reverse flex-lg-row">
                     <div class="col-lg-6 hero-text mt-5 mt-lg-0">
                         <h1 class="display-1 fw-bold">Anthonee <br> Rumbaoa</h1>
-                        
                         <h3 class="role-text mb-4">I am a <span class="typing-text">Visual Designer</span><span class="cursor">|</span></h3>
-                        
                         <p class="lead text-secondary mb-5">
                             Focusing on UI/UX, interactive web experiences, and visual storytelling. 
                             I bridge the gap between code and creativity. <br>
                             <em>(Still trying to get 10 hours of sleep.)</em>
                         </p>
-
                         <div class="hero-buttons">
                             <a href="#skills" class="btn btn-white rounded-pill px-4 py-2 me-3">My Portfolio</a>
                             <a href="#contact" class="btn btn-outline-light rounded-pill px-4 py-2">Let's Talk</a>
                         </div>
                     </div>
-
                     <div class="col-lg-6 text-center">
                         <div class="image-wrapper">
                             <img src="DSC08430.jpg" alt="Anthonee Profile" class="img-fluid main-photo">
@@ -66,7 +224,7 @@
 
         <section id="skills" class="py-5">
             <div class="container">
-                <h2 class="mb-5 fw-bold">What I Do</h2>
+                <h2 class="mb-5 fw-bold text-white">What I Do</h2>
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="dark-card p-4 h-100">
@@ -99,7 +257,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
