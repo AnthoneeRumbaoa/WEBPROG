@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
 :root {
-    --bg-dark: #111111;
-    --bg-sidebar: #1a1a1a;
-    --card-bg: #1f1f1f;
-    --text-main: #ffffff;
-    --text-muted: #a1a1a1;
-    --accent: #ffffff;
+    bg-dark: #111111;
+    bg-sidebar: #1a1a1a;
+    card-bg: #1f1f1f;
+    text-main: #ffffff;
+    text-muted: #a1a1a1;
+    accent: #ffffff;
 }
 
 body {
