@@ -7,18 +7,25 @@
     --text-muted: #a1a1a1;
 }
 
-body {
-    background-color: var(--bg-dark) !important; /* Forces Black Background */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--bg-dark) !important;
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+}
+
+body {
     padding-top: 80px; 
 }
 
+/* Navbar */
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.95) !important;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #333;
+    background-color: #000000 !important;
+    backdrop-filter: none !important;
+    border-bottom: 1px solid #1a1a1a;
     padding: 1rem 0;
 }
 
@@ -44,15 +51,7 @@ body {
     background-color: var(--bg-dark);
 }
 
-.social-nav a {
-    transition: transform 0.3s;
-}
-.social-nav a:hover {
-    transform: translateY(-3px);
-    color: #ccc !important;
-}
-
-/* HERO SECTION */
+/* Hero Section */
 .hero h1 {
     font-weight: 800;
     letter-spacing: -3px;
@@ -82,7 +81,7 @@ body {
     margin-top: 2rem;
 }
 
-/* BUTTONS */
+/* Buttons */
 .btn-white {
     background-color: white;
     color: black;
@@ -96,6 +95,14 @@ body {
     color: white;
 }
 
+.btn-white.static {
+    cursor: default;
+}
+.btn-white.static:hover {
+    background-color: white;
+    color: black;
+}
+
 .btn-outline-light {
     border: 2px solid rgba(255,255,255,0.3);
     font-weight: 600;
@@ -107,7 +114,6 @@ body {
     border-color: #333;
 }
 
-/* IMAGE STYLING */
 .image-wrapper {
     position: relative;
     border-radius: 20px;
@@ -115,6 +121,7 @@ body {
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
     max-width: 450px;
     margin: 0 auto;
+    background-color: transparent; /* Ensures transparency */
 }
 
 .main-photo {
@@ -122,6 +129,7 @@ body {
     width: 100%;
     filter: grayscale(100%);
     transition: transform 0.5s ease, filter 0.5s ease;
+    display: block; /* Removes tiny gap at bottom of images */
 }
 
 .main-photo:hover {
@@ -129,7 +137,7 @@ body {
     transform: scale(1.02);
 }
 
-/* CARD STYLING */
+/* Cards */
 .dark-card {
     background-color: var(--card-bg);
     border-radius: 20px;
@@ -160,7 +168,65 @@ body {
     transform: scale(1.1);
 }
 
-/* RESPONSIVE TWEAKS */
+/* Photo Scroller */
+.photo-scroller {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: thin; 
+    scrollbar-color: #333 #000;
+}
+
+.photo-scroller::-webkit-scrollbar {
+    height: 8px;
+}
+.photo-scroller::-webkit-scrollbar-track {
+    background: #000;
+}
+.photo-scroller::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.photo-item {
+    min-width: 300px;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: scale(0.98);
+    border-color: #fff;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contact Section */
+.contact-box {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.hover-white:hover {
+    color: white !important;
+    transform: translateY(-3px);
+    display: inline-block;
+}
+
+/* Responsive */
 @media (max-width: 991px) {
     .hero {
         text-align: center;
@@ -180,9 +246,9 @@ body {
     .image-wrapper {
         margin-top: 3rem;
     }
-    
-    .social-nav { 
-        justify-content: center; 
-        margin-bottom: 1rem; 
+
+    .photo-item { 
+        min-width: 250px; 
+        height: 350px; 
     }
 }
