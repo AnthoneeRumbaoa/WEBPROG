@@ -156,12 +156,63 @@
             transform: scale(1.1);
         }
 
+        .photo-scroller {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scrollbar-width: thin; 
+            scrollbar-color: #333 #000;
+        }
+        
+        .photo-scroller::-webkit-scrollbar {
+            height: 8px;
+        }
+        .photo-scroller::-webkit-scrollbar-track {
+            background: #000;
+        }
+        .photo-scroller::-webkit-scrollbar-thumb {
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .photo-item {
+            min-width: 300px;
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover {
+            transform: scale(0.98);
+            border-color: #fff;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-box {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+
         @media (max-width: 991px) {
             .hero { text-align: center; padding-top: 2rem; }
             .hero h1 { font-size: 3.5rem; }
             .hero-buttons { justify-content: center; display: flex; gap: 10px; }
             .image-wrapper { margin-top: 3rem; }
             .social-nav { justify-content: center; margin-bottom: 1rem; }
+            .photo-item { min-width: 250px; height: 350px; }
         }
     </style>
 </head>
@@ -176,7 +227,7 @@
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Designs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#photography">Photography</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <div class="d-flex ms-lg-3 mt-3 mt-lg-0 social-nav justify-content-center">
@@ -252,6 +303,57 @@
                 </div>
             </div>
         </section>
+
+        <section id="photography" class="py-5">
+            <div class="container">
+                <h2 class="mb-4 fw-bold text-white">Selected Shots</h2>
+                <p class="text-secondary mb-4">A collection of moments captured through my lens. Swipe to see more.</p>
+                
+                <div class="photo-scroller">
+                    <div class="photo-item">
+                        <img src="" alt="Photography Shot 1">
+                    </div>
+                    <div class="photo-item">
+                        <img src="" alt="Photography Shot 2">
+                    </div>
+                    <div class="photo-item">
+                        <img src="" alt="Photography Shot 3">
+                    </div>
+                    <div class="photo-item">
+                        <img src="" alt="Photography Shot 4">
+                    </div>
+                    <div class="photo-item">
+                        <img src="" alt="Photography Shot 5">
+                    </div>
+                    <div class="photo-item">
+                        <img src="" alt="Photography Shot 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 mb-5">
+            <div class="container">
+                <div class="contact-box">
+                    <h2 class="fw-bold text-white mb-3">Let's Create Together</h2>
+                    <p class="text-secondary mb-4 lead">Got a project in mind or just want to say hello? Feel free to reach out.</p>
+                    
+                    <a href="mailto:your-email@example.com" class="btn btn-white rounded-pill px-5 py-3 fw-bold mb-4">
+                        <i class="fas fa-envelope me-2"></i> Send me an Email
+                    </a>
+
+                    <div class="mt-4">
+                        <p class="text-white fw-bold mb-3">Connect with me</p>
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="https://www.linkedin.com/in/anthonee-jhel-rumbaoa-91727733b/"> <i class="btn btn-white rounded-pill px-5 py-3 fw-bold mb-4"></i></a>
+                            <a href="#" class="text-secondary fs-3 hover-white"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-secondary fs-3 hover-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
