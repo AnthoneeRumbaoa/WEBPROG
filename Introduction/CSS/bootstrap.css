@@ -15,7 +15,6 @@ body {
     padding-top: 80px; 
 }
 
-/* NAVBAR STYLING */
 .custom-navbar {
     background-color: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(10px);
