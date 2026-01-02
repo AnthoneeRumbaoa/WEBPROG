@@ -8,16 +8,16 @@
 }
 
 body {
-    background-color: var(--bg-dark) !important; /* Force Black */
+    background-color: var(--bg-dark) !important; /* Forces Black Background */
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
     padding-top: 80px; 
 }
 
-/* --- NAVBAR STYLING --- */
+/* NAVBAR STYLING */
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.95) !important; /* Dark Navbar */
+    background-color: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #333;
     padding: 1rem 0;
@@ -31,22 +31,20 @@ body {
 }
 
 .nav-link {
-    color: var(--text-muted) !important; /* Grey Links */
+    color: var(--text-muted) !important;
     font-weight: 500;
     margin-left: 1rem;
     transition: 0.3s;
 }
 
 .nav-link:hover, .nav-link:focus, .nav-link.active {
-    color: var(--text-main) !important; /* White on Hover */
+    color: var(--text-main) !important;
 }
 
-/* Mobile Menu Fix */
 .navbar-collapse {
-    background-color: var(--bg-dark); /* Ensures mobile menu is black */
+    background-color: var(--bg-dark);
 }
 
-/* Social Icons */
 .social-nav a {
     transition: transform 0.3s;
 }
