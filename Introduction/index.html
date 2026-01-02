@@ -102,14 +102,10 @@
             border-color: #333;
         }
 
-        /* --- Image Styles Updated --- */
         .image-wrapper {
             position: relative;
-            /* Removed border-radius here to allow image to blend if needed, 
-               but keeping it for the container is usually safe */
             border-radius: 20px;
             overflow: hidden;
-            /* Slight glow to separate from pure black background */
             box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
             max-width: 450px;
             margin: 0 auto;
@@ -117,8 +113,6 @@
         .main-photo {
             border-radius: 20px;
             width: 100%;
-            /* Note: The image I generated is already B&W. 
-               The grayscale filter ensures consistency if you swap it later. */
             filter: grayscale(100%);
             transition: transform 0.5s ease, filter 0.5s ease;
         }
