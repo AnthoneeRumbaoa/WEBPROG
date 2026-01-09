@@ -1,31 +1,43 @@
-#app2 {
+.photo-scroller {
     display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #000;
+    scroll-behavior: smooth;
 }
 
-#app2 > div {
-    border: solid black 1px;
-    width: 80%;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #111111;
+.photo-scroller::-webkit-scrollbar {
+    height: 8px;
+}
+.photo-scroller::-webkit-scrollbar-track {
+    background: #000;
+}
+.photo-scroller::-webkit-scrollbar-thumb {
+    background-color: #333;
     border-radius: 10px;
 }
 
-#app2 img {
-    width: 70px;
-    height: 70px;
-    margin: 10px;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
+.photo-item {
+    min-width: 300px;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
 }
 
-#app2 img:hover {
-    transform: scale(1.1);
-    border: 1px solid white;
+.photo-item:hover {
+    transform: scale(0.98);
+    border-color: #fff;
     cursor: pointer;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -1,5 +1,5 @@
-  const app = Vue.createApp({
-   data() {
+const app = Vue.createApp({
+  data() {
     return {
       TheArchive: [
         '1.jpg',
@@ -13,7 +13,7 @@
         '9.jpg'
       ]
     }
-   }
-  })
-  
-  app.mount('#app')
+  }
+})
+
+app.mount('#app')
