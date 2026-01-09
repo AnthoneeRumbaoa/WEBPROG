@@ -1,10 +1,10 @@
-#app {
+#app2 {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
 }
 
-#app > div {
+#app2 > div {
     border: solid black 1px;
     width: 80%;
     padding: 10px;
@@ -15,7 +15,7 @@
     border-radius: 10px;
 }
 
-#app img {
+#app2 img {
     width: 70px;
     height: 70px;
     margin: 10px;
@@ -24,7 +24,8 @@
     transition: transform 0.2s ease;
 }
 
-#app img:hover {
+#app2 img:hover {
     transform: scale(1.1);
     border: 1px solid white;
+    cursor: pointer;
 }
