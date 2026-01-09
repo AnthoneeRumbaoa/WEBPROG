@@ -95,19 +95,16 @@
             </div>
         </section>
 
-        <section id="collection" class="py-5">
-                <div class="container">
-                    <h2 class="mb-4 fw-bold text-white">The Archive</h2>
-                    
-                    <div id="archive-container">
-                        <div class="grid-box">
-                            <div v-for="image in TheArchive" :key="image">
-                                <img :src="image" alt="Gallery Image">
-                            </div>
-                        </div>
+        <section id="collection">
+            <div id="app2">
+                <div>
+                    <div v-for="image in TheArchive" :key="image">
+                        <img :src="image">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
 
         <section id="contact" class="py-5 mb-5">
             <div class="container">
