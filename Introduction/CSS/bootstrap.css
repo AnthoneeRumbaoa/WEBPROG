@@ -152,7 +152,7 @@ body {
 }
 
 #card-design {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), ('/GD.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), ('../GD.jpg');
 }
 
 #card-photo {
