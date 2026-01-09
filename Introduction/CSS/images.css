@@ -1,0 +1,30 @@
+#app {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#app > div {
+    border: solid black 1px;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #111111;
+    border-radius: 10px;
+}
+
+#app img {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+#app img:hover {
+    transform: scale(1.1);
+    border: 1px solid white;
+}
