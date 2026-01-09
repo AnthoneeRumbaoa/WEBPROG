@@ -93,13 +93,11 @@
             </section>
 
             <section id="collection" class="py-5">
-                <div class="container-fluid">
-                    <div class="container">
-                        <h2 class="mb-4 fw-bold text-white">The Archive</h2>
-                        <p class="text-secondary mb-4">A collection of moments captured through my lens. Swipe to see more.</p>
-                    </div>
+                <div class="container">
+                    <h2 class="mb-4 fw-bold text-white">The Archive</h2>
+                    <p class="text-secondary mb-4">A collection of moments captured through my lens. Swipe to see more.</p>
                     
-                    <div class="photo-scroller px-4">
+                    <div class="photo-scroller">
                         <div v-for="image in TheArchive" :key="image" class="photo-item">
                             <img :src="image" alt="Archive Shot">
                         </div>

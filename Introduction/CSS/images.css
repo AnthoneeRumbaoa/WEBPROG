@@ -20,11 +20,8 @@
 }
 
 .photo-item {
-    /* FIXED: Changed from 33vw to 400px. 
-       Now, if you zoom in, the 400px will visually expand. */
-    min-width: 400px; 
-    height: 60vh;
-    
+    min-width: 350px; 
+    height: 500px;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -45,16 +42,9 @@
     object-fit: cover;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 576px) {
     .photo-item {
-        min-width: 60vw;
-        height: 50vh;
-    }
-}
-
-@media (max-width: 600px) {
-    .photo-item {
-        min-width: 85vw;
-        height: 50vh;
+        min-width: 280px;
+        height: 400px;
     }
 }

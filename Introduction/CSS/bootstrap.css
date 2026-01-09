@@ -124,24 +124,38 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-.dark-card h4 {
-    font-weight: 700;
-    margin-top: 1rem;
-    color: white;
-    position: relative;
     z-index: 1;
+}
+
+.dark-card h4, .dark-card p, .dark-card i {
+    position: relative;
+    z-index: 2;
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
-.dark-card p, .dark-card i {
-    position: relative;
-    z-index: 1;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+
+.dark-card p {
+    color: #e0e0e0 !important;
+}
+
+#card-design {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../GD.jpg');
+}
+
+#card-photo {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../GD.jpg');
+}
+
+#card-academic {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../GD.jpg');
+}
+
+#card-interest {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../GD.jpg');
 }
 
 .dark-card:hover {
     transform: translateY(-8px);
-    border-color: #555;
+    border-color: #fff;
     box-shadow: 0 10px 30px rgba(255,255,255,0.1);
 }
 .dark-card i {
@@ -149,22 +163,6 @@ body {
 }
 .dark-card:hover i {
     transform: scale(1.1);
-}
-
-#card-design {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), ('../GD.jpg');
-}
-
-#card-photo {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), ('/GD.jpg');
-}
-
-#card-academic {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), ('GD.jpg');
-}
-
-#card-interest {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), ('GD.jpg');
 }
 
 .contact-box {
